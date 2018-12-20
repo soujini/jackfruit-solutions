@@ -1,0 +1,40 @@
+<section class="section module-small d-none d-sm-block">
+<mdb-navbar SideClass="navbar fixed-top navbar-custom navbar-expand-lg scrolling-navbar ie-nav navbar-transparent" [containerInside]="false">
+  <logo>
+  </logo>
+  <links>
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <ul class="navbar-nav navbar-flex-icons">
+      <li id="li-home" class="nav-item active waves-light" mdbRippleRadius [ngClass]="{'orange-text': activeMenu=='home'}" (click)="scroll(home,'home')">
+        <a class="nav-link">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius [ngClass]="{'orange-text': activeMenu=='about'}" (click)="scroll(about,'about')">
+        <a class="nav-link">About</a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius [ngClass]="{'orange-text': activeMenu=='projects'}" (click)="scroll(projects,'projects')">
+        <a class="nav-link">Projects</a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius [ngClass]="{'orange-text': activeMenu=='contact'}" (click)="scroll(contact,'contact')">
+        <a class="nav-link">Contact</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
+</section>
+<div class="text-center">
+  <div #home>
+    <app-home></app-home>
+  </div>
+
+  <div #about>
+    <app-about></app-about>
+  </div>
+  <div #projects>
+    <app-projects></app-projects>
+  </div>
+
+  <div #contact>
+    <app-contact></app-contact>
+  </div>
+</div>
